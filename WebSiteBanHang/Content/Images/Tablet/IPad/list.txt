@@ -1,0 +1,18 @@
+ Volume in drive D is IT
+ Volume Serial Number is DE86-9A5F
+
+ Directory of D:\C#\WebSiteBanHang - New\WebSiteBanHang\Content\Images\Tablet\IPad
+
+[.]
+[..]
+ipad-10-2-inch-wifi-128gb-2019-silver-600x600.jpg
+ipad-10-2-inch-wifi-32gb-2019-gold-600x600.jpg
+ipad-10-2-inch-wifi-cellular-128gb-2019-gray-600x600.jpg
+ipad-10-2-inch-wifi-cellular-32gb-2019-gold-600x600.jpg
+ipad-air-105-inch-wifi-2019-gold-600x600.jpg
+ipad-mini-79-inch-wifi-2019-gold-600x600.jpg
+ipad-mini-79-inch-wifi-cellular-64gb-2019-gold-600x600.jpg
+list.txt
+
+               8 File(s)        297,306 bytes
+               2 Dir(s)  48,986,046,464 bytes free

@@ -1,0 +1,15 @@
+ Volume in drive D is IT
+ Volume Serial Number is DE86-9A5F
+
+ Directory of D:\C#\WebSiteBanHang - New\WebSiteBanHang\Content\Images\Tablet\Samsung
+
+[.]
+[..]
+list.txt
+samsung-galaxy-tab-a-101-t515-2019-gold-600x600.jpg
+samsung-galaxy-tab-a8-plus-p205-black-600x600.jpg
+samsung-galaxy-tab-a8-t295-2019-silver-600x600.jpg
+samsung-galaxy-tab-s6-600x600.jpg
+
+               5 File(s)        161,158 bytes
+               2 Dir(s)  48,986,046,464 bytes free

@@ -1,0 +1,14 @@
+﻿@using WebSiteBanHang.Models
+@model ItemGioHang
+
+<!-- cart details -->
+<div class="col-3 top_nav_right text-center mt-sm-0 mt-2" >
+    <div>
+            <button class="btn w3view-cart" type="button" name="submit" value="">
+                <a href="@Url.Action("XemGioHang","GioHang")" style="color:white"><i class="fas fa-cart-arrow-down"></i> </a>
+            </button>
+            <p> @ViewBag.TongSoLuong SP - @ViewBag.TongTien.ToString("#,##") đ</p>
+    </div>
+</div>
+
+<!-- //cart details -->

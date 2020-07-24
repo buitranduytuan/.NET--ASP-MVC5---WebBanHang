@@ -1,0 +1,104 @@
+﻿@using WebSiteBanHang.Models
+@model IEnumerable<SanPham>
+
+<!-- NAVIGATION -->
+<div class="navbar-inner">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <div class="agileits-navi_search">
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" style="color:#28a745">
+                        All Categories
+                    </button>
+                    <div class="dropdown-menu">
+                        @foreach (var groupItem in Model.GroupBy(n => n.LoaiSanPham))
+                        {
+                            if (groupItem.Key != null)
+                            {
+                                <a class="dropdown-item" href="@Url.Action("FindProductByLoaiSP","SanPham",new { maLoaiSP = @groupItem.Key.MaLoaiSP})">@groupItem.Key.TenLoai.ToUpper()</a>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto text-center mr-xl-5">
+
+                    <li class="nav-item active mr-lg-2 mb-lg-0 mb-2">
+                        <a class="nav-link" href="@Url.Action("Index","Home")">
+                            Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    @foreach (var groupItem in Model.GroupBy(n => n.LoaiSanPham))
+                    {
+                        if (groupItem.Key != null)
+                        {
+                            <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    @groupItem.Key.TenLoai
+                                </a>
+                                <div class="dropdown-menu">
+
+                                    <div class="multi-gd-img">
+                                        <ul class="multi-column-dropdown">
+                                            @foreach (var item in groupItem.GroupBy(m => m.NhaSanXuat))
+                                            {
+                                                if (item.Key != null)
+                                                {
+                                                    <li>
+                                                        <a style="padding:10px 25px" href="@Url.Action("FindByLoaiSP-NSX","SanPham",
+                                                                                          new { maLoaiSP = @groupItem.Key.MaLoaiSP , maNSX = @item.Key.MaNSX})">
+                                                            @item.Key.TenNSX.ToUpper()
+                                                        </a>
+                                                    </li>
+                                                }
+                                            }
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </li>
+                        }
+
+                    }
+
+
+
+                    <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+
+                    <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pages
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="product.html">Product 1</a>
+                            <a class="dropdown-item" href="product2.html">Product 2</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="single.html">Single Product 1</a>
+                            <a class="dropdown-item" href="single2.html">Single Product 2</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="checkout.html">Checkout Page</a>
+                            <a class="dropdown-item" href="payment.html">Payment Page</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- /NAVIGATION -->

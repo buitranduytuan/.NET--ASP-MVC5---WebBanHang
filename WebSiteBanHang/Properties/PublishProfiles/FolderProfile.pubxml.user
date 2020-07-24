@@ -1,0 +1,1267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\TuanBTD\WebSiteBanHang - 2504\WebSiteBanHang\bin\Release\Publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>10/23/2017 13:15:18</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>10/23/2017 13:15:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>09/05/2018 16:10:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 11:48:56</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/22/2019 01:06:16</publishTime>
+    </File>
+    <File Include="bin/PagedList.dll">
+      <publishTime>09/30/2013 17:36:38</publishTime>
+    </File>
+    <File Include="bin/PagedList.Mvc.dll">
+      <publishTime>09/30/2013 18:15:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>08/08/2018 12:18:12</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>08/08/2018 12:18:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>08/08/2018 12:09:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>12/05/2017 09:36:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>12/05/2017 09:36:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
+      <publishTime>11/05/2016 18:55:32</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>11/05/2016 18:55:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>05/16/2018 03:29:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Console.dll">
+      <publishTime>11/05/2016 18:55:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>11/05/2016 18:55:52</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
+      <publishTime>11/05/2016 18:55:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>11/05/2016 18:55:52</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Globalization.Calendars.dll">
+      <publishTime>11/05/2016 18:56:02</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.dll">
+      <publishTime>11/05/2016 18:56:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.ZipFile.dll">
+      <publishTime>11/05/2016 18:56:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>11/05/2016 18:56:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>11/05/2016 18:56:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Http.dll">
+      <publishTime>11/05/2016 18:56:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Sockets.dll">
+      <publishTime>11/05/2016 18:56:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>05/16/2018 03:29:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Runtime.InteropServices.RuntimeInformation.dll">
+      <publishTime>11/05/2016 18:57:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>11/05/2016 18:57:14</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
+      <publishTime>11/05/2016 18:57:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
+      <publishTime>11/05/2016 18:57:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>11/05/2016 18:57:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>11/05/2016 18:57:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Tasks.Extensions.dll">
+      <publishTime>11/05/2016 18:57:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.ValueTuple.dll">
+      <publishTime>11/05/2016 18:57:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
+      <publishTime>11/05/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
+      <publishTime>11/05/2016 18:57:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.dll">
+      <publishTime>11/05/2016 18:57:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
+      <publishTime>11/05/2016 18:57:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>08/08/2018 12:18:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>08/08/2018 12:09:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>08/08/2018 12:18:16</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/28/2018 12:59:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2014 15:26:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>11/28/2018 13:00:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>01/23/2014 13:57:34</publishTime>
+    </File>
+    <File Include="bin/WebSiteBanHang.dll">
+      <publishTime>04/29/2020 15:02:16</publishTime>
+    </File>
+    <File Include="bin/WebSiteBanHang.pdb">
+      <publishTime>04/29/2020 15:02:16</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>04/22/2020 14:25:24</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>04/22/2020 14:25:23</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>04/22/2020 14:25:23</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css.map">
+      <publishTime>04/22/2020 14:25:23</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>04/22/2020 14:25:23</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>04/22/2020 14:25:23</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>04/22/2020 14:25:23</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>04/22/2020 14:25:23</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.css">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/css/creditly.css">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/css/easy-responsive-tabs.css">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/css/flexslider.css">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/css/fontawesome-all.css">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/css/menu.css">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/css/popuo-box.css">
+      <publishTime>04/24/2020 08:30:21</publishTime>
+    </File>
+    <File Include="Content/css/style.css">
+      <publishTime>04/28/2020 09:17:04</publishTime>
+    </File>
+    <File Include="Content/Images/a.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/a3.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/a4.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/ab.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/arrow.png">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/b1.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/b2.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/b3.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/b4.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/bannersamsung.jpg">
+      <publishTime>04/24/2020 21:40:21</publishTime>
+    </File>
+    <File Include="Content/Images/bannertggdd.png">
+      <publishTime>04/24/2020 21:23:37</publishTime>
+    </File>
+    <File Include="Content/Images/bg.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/bg2.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/close_1.png">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/h.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/hoangha.jpg">
+      <publishTime>04/24/2020 21:34:44</publishTime>
+    </File>
+    <File Include="Content/Images/image1.png">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/k1.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/k2.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/k3.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-530f-i3-8145u-4gb-1tb-bq185t-24-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-a512fa-i5-8265u-8gb-1tb-win10-ej552t-16-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-gaming-rog-g531gd-i7-9750h-8gb-512gb-4gb-gtx1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-gaming-rog-strix-g531g-i7-9750h-8gb-512gb-gtx-6-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-s530f-i7-8565u-8gb-16gb-1tb-mx150-bq550t-7-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-s530fn-i5-8265u-4gb-1tb-mx150-win10-bq128t-28-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-vivobook-a412f-i3-8145u-4gb-32gb-512gb-win10-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-vivobook-a412f-i510210u-8gb-32gb-512gb-win10-218865-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-vivobook-a412fa-i5-ek738t-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-vivobook-a512fa-i3-8145u-4gb-512gb-win10-ej1-220574copy-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-vivobook-a512fa-i5-10210u-8gb-512gb-chuot-win-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-vivobook-a512fl-i5-10210u-8gb-512gb-2gb-mx250-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-vivobook-s412f-i3-8145u-4gb-512gb-ek342t3-1-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-vivobook-x409f-i5-8265u-8gb-1tb-win10-ek138t2-1-thumb-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-vivobook-x409fa-i3-8145u-4gb-512gb-win10-ek3-15-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-vivobook-x409ja-i5-1035g1-8gb-512gb-win10-ek-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-vivobook-x509f-i7-8565u-8gb-mx230-win10-ej13-5-2-1-2-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-vivobook-x509fj-i3-8145u-4gb-1tb-2gb-mx230-wi-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-vivobook-x509fj-i5-8265u-8gb-16gb-1tb-2gb-mx2-17-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-x409ja-i3-ek015t-220526-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-x441ma-ga024t-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/asus/asus-x507ma-n4000-4gb-256gb-win10-br318t-10-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-inspiron-3576-i5-8250u-70157552-16-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-inspiron-3579-i5-8300h-8gb-1tb-128gb-gtx1050t-17-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-inspiron-3580-i5-8265u-4gb-1tb-radeon-2gb-70-15-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-inspiron-3580-i7-8565u-8gb-256gb-amd-520-win1-14-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-inspiron-3580-i7-8565u-8gb-2tb-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-inspiron-5370-i3-8130u-4gb-128gb-133f-win10-n-18-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-inspiron-5480-i5-8265u-4gb-1tb-128gb-office-m-17-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-inspiron-5482-i7-8565u-8gb-256gb-touch-win10-21-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-inspiron-5570-m5i5238w-office365-dai-dien-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-inspiron-5584-i5-8265u-4gb-1tb-mx130-win10-n-20-1-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-inspiron-5584-i5-8265u-8gb-1tb-156f-win10-cx-17-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-inspiron-5584-i5-8265u-8gb-256gb-2gb-mx130-15-17-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-inspiron-5584-i5-8265u-8gb-2tb-2gb-mx130-156f-17-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-inspiron-7373-i5-8250u-8gb-256gb-win10-office-450-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-inspiron-7591-i5-9300h-8gb-256gb-4gb-gtx1050-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-vos15-5581-i5-8265-4gb-1tb-mx130-office-vrf6-2-3-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-vostro-13-5370-i5-7m6d51-15-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-vostro-3578-ngmpf11-450x300-600x600-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-vostro-3578-p63f002v78b-15-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-vostro-3580-i5-8265u-4gb-1tb-156f-win10-t3rm-18-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-vostro-3580-i5-8265u-4gb-1tb-2gb-amd520-win10-15-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-vostro-3580-i7-8565u-8gb-256gb-win10-t3rmd2-15-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-vostro-3590-i5-10210u-4gb-1tb-win10-grmgk1001122-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-vostro-3590-i7-grmgk2-220718-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-vostro-5481-i5-8265u-4gb-1tb-14f-office365-17-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-vostro-5581-i5-8265u-4gb-1tb-office365-win10-1-2-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-vostro-5581-i5-8265u-8gb-1tb-win10-70175957-15-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/dell/dell-xps-13-9370-i7-8550u-8gb-256gb-office365-win1-1-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-15-da1033tx-i7-8565u-4gb-1tb-mx130-5nk26pa-33397-thumb-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-15s-du0040tx-i7-8565u-8gb-1tb-mx130-win10-6zf6-7-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-15s-du1035tx-i5-8rk36pa-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-15s-du1039tx-i7-10510u-8gb-512gb-2gb-mx130-win1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-elitebook-x360-1030-g3-i7-8550u-16gb-512gb-133f-21-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-elitebook-x360-1030-g3-i7-8550u-8gb-256gb-133f-204853-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-elitebook-x360-1040-g5-i7-8550u-16gb-512gb-touc-6-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-envy-13-ah1010tu-16-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-envy-13-ah1012tu-i7-8565u-8gb-256gb-win10-5hz1-13-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-envy-13-aq0025tu-i5-8265u-8gb-128gb-133f-win10-11-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-envy-13-aq0026tu-i5-8265u-8gb-256gb-win10-6zf36-thumb-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-envy-13-aq0027tu-i7-8565u-8gb-256gb-win10-6zf4-8-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-envy-13-aq0032tx-i7-8565u-8gb-256gb-2gb-mx250-1-8-thumb-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-envy-13-aq1021tu-i5-8qn79pa-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-envy-13-aq1022tu-i5-10210u-8gb-512gb-win10-8qn-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-envy-13-aq1057tx-i7-10510u-8gb-512gb-2gb-mx250-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-envy-x360-ar0071au-r5-3500u-8gb-256gb-touch-win-209107-thumb-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-envy-x360-ar0072au-r7-3700u-8gb-256gb-touch-win2-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-pavilion-14-ce2100tx-i5-8265u-8gb-16gb-1tb-2gb-210082-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-pavilion-14-ce3027tu-i5-1035g1-8gb-16gb-256gb-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-pavilion-15-cs2058tx-i7-8565u-8gb-1tb-2gb-mx250-9-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-pavilion-15-cs2120tx-i5-8265u-8gb-1tb-2g-mx130-17-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-pavilion-15-cs3012tu-i5-1035g1-8gb-512gb-win10-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-pavilion-15-cs3061tx-i5-8re83pa1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-pavilion-15-cx0178tx-i7-8750h-8gb-128gb-1tb-4gb-4-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-pavilion-15-cx0182tx-i7-8750h-8gb-1tb-128gb-4gb-3-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-probook-430-g6-i5-8265u-4gb-1tb-133-win10-5ym9-6-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/HP/hp-probook-430-g6-i5-8265u-4gb-256gb-win10-6ux78p2-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/macbook/apple-macbook-air-2019-i5-16ghz-8gb-128gb-mvfm2sa-13-32-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/macbook/apple-macbook-air-2019-i5-16ghz-8gb-256gb-mvfl2sa-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/macbook/apple-macbook-air-mqd32sa-a-i5-5350u-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/macbook/apple-macbook-pro-touch-2019-15-thumb-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/macbook/apple-macbook-pro-touch-2019-i5-14ghz-8gb-128gb-m-2-2-207683-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/macbook/apple-macbook-pro-touch-2019-i5-14ghz-8gb-256gb-m-applemacbookprotouch2019-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/macbook/macbook-pro-16-201926-macbookprotouch16inch-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Laptop/macbook/macbook-pro-touch-2019-i9-23ghz-16gb-512gb-4gb-rad-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Logo/Asus.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Logo/Dell.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Logo/HP.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Logo/Huawei.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Logo/IPad.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Logo/Iphone.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Logo/Lenovo.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Logo/Macbook.png">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Logo/Masstel.png">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Logo/Mobell.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Logo/Oppo.png">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Logo/Samsung.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Logo/Vsmart.png">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/Logo/Xiaomi.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/logo2.png">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/m1.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/m2.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/m3.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/m4.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/m5.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/m6.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/m7.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/m8.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/m9.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/mk1.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/mk2.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/mk3.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/mk4.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/mk5.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/mk6.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/mk7.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/mk8.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/mk9.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/mm1.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/mm2.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/mm3.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/mm4.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/mm5.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/mm6.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/move-up.png">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/off1.png">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/off2.png">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/pay1.png">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/pay2.png">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/pay3.png">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/pay4.png">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/pay5.png">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/pay6.png">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/pay7.png">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/pay8.png">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/pay9.png">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/paypal.png">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/search.png">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/si1.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/si2.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/si3.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/sii1.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/sii2.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/sii3.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Iphone/iphone-11-128gb-green-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Iphone/iphone-11-256gb-white-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Iphone/iphone-11-pro-256gb-black-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Iphone/iphone-11-pro-black-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Iphone/iphone-11-pro-max-256gb-black-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Iphone/iphone-11-pro-max-512gb-gold-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Iphone/iphone-11-pro-max-green-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Iphone/iphone-11-red-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Iphone/iphone-7-gold-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Iphone/iphone-7-plus-32gb-gold-600x600-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Iphone/iphone-8-plus-hh-600x600-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Iphone/iphone-xs-256gb-white-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Iphone/iphone-xs-gold-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Iphone/iphone-xs-max-256gb-white-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Iphone/iphone-xs-max-gold-600x600.jpg">
+      <publishTime>04/23/2020 19:58:27</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Oppo/oppo-a1k-do-600x600-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Oppo/oppo-a31-2020-128gb-den-600x600-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Oppo/oppo-a31-2020-trang-600x600-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Oppo/oppo-a5-2020-128gb-trang-600x600-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Oppo/oppo-a5-2020-den-600x600-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Oppo/oppo-a5s-do-600x600-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Oppo/oppo-a9-600x600-trang-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Oppo/oppo-f11-pro-128gb-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Oppo/oppo-find-x2-blue-600x600-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Oppo/oppo-reno-2-pink-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Oppo/oppo-reno2-f-600x600-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-a20s-32gb-red-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-a20s-black-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-a30-32gb-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-a30s-green-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-a50-128gb-blue-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-a50-blue-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-a50s-green-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-a51-white-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-a70-white-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-a71-blue-600x600-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-a80-gold-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-note-10-lite-thumb-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-note-10-plus-blue-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-note-10-silver-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-s10-lite-blue-thumb-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-s10-plus-white-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-s20-600x600-hong-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-s20-plus-600x600-fix-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-s20-ultra-600x600-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Samsung/samsung-galaxy-z-flip-den-600x600-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Vsmart/vsmart-active-3-600x600-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Vsmart/vsmart-active-3-6gb-emerald-green-600x600-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Vsmart/vsmart-bee-3-white-600x600-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Vsmart/vsmart-bee-blue-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Vsmart/vsmart-joy-3-2gb-tim-600x600-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Vsmart/vsmart-joy-3-4gb-den-600x600-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Vsmart/vsmart-joy-3-tim-600x600-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Vsmart/vsmart-star-3-xanh-600x600-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Vsmart/vsmart-star-coral-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Xiaomi/xiaomi-mi-9-se-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Xiaomi/xiaomi-mi-a3-white-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Xiaomi/xiaomi-mi-note-10-pro-black-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Xiaomi/xiaomi-redmi-7-16gb-black-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Xiaomi/xiaomi-redmi-7-black-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Xiaomi/xiaomi-redmi-8-64gb-red-600x600.jpg">
+      <publishTime>04/25/2020 09:47:18</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Xiaomi/xiaomi-redmi-8-blue-600x600.jpg">
+      <publishTime>04/25/2020 09:47:18</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Xiaomi/xiaomi-redmi-8a-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Xiaomi/xiaomi-redmi-go-16gb-blue-600x600.jpg">
+      <publishTime>04/25/2020 09:47:18</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Xiaomi/xiaomi-redmi-note-8-128gb-black-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Xiaomi/xiaomi-redmi-note-8-32gb-white-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Xiaomi/xiaomi-redmi-note-8-pro-6gb-128gb-white-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Xiaomi/xiaomi-redmi-note-8-pro-white-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Xiaomi/xiaomi-redmi-note-8-white-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/SmartPhone/Xiaomi/xiaomi-redmi-note-9s-4gb-green-400x460-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/Huawei/huawei-mediapad-m5-lite-gray-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/Huawei/huawei-mediapad-t3-10-1-33397-thumb-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/Huawei/huawei-mediapad-t3-7-2018-33397-thumbmau-vang-600x600.png">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/Huawei/huawei-mediapad-t3-80-gold-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/Huawei/huawei-mediapad-t5-16gb-600x600-2-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/Huawei/huawei-mediapad-t5-33397-thumb123-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/IPad/ipad-10-2-inch-wifi-128gb-2019-silver-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/IPad/ipad-10-2-inch-wifi-32gb-2019-gold-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/IPad/ipad-10-2-inch-wifi-cellular-128gb-2019-gray-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/IPad/ipad-10-2-inch-wifi-cellular-32gb-2019-gold-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/IPad/ipad-air-105-inch-wifi-2019-gold-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/IPad/ipad-mini-79-inch-wifi-2019-gold-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/IPad/ipad-mini-79-inch-wifi-cellular-64gb-2019-gold-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/Lenovo/lenovo-tab-4-8-tb-8504x-thumb-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/Lenovo/lenovo-tab-e10-tb-x104l-den-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/Lenovo/lenovo-tab-e7-tb-7104i-33397-thumb1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/Masstel/masstel-tab10-pro-gold-2-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/Masstel/masstel-tab8-pro-gold-1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/Mobell/mobell-tab-10-33397-1-thumb1-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/Mobell/mobell-tab-7s-thumb-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/Mobell/mobell-tab-8a-33397-600x600-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/Samsung/samsung-galaxy-tab-a-101-t515-2019-gold-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/Samsung/samsung-galaxy-tab-a8-plus-p205-black-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/Samsung/samsung-galaxy-tab-a8-t295-2019-silver-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Tablet/Samsung/samsung-galaxy-tab-s6-600x600.jpg">
+      <publishTime>04/23/2020 19:58:28</publishTime>
+    </File>
+    <File Include="Content/Images/Thumbs.db">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/Images/user.jpg">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/js/bootstrap.js">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/js/creditly.js">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/js/creditly2.js">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/js/easing.js">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/js/easyResponsiveTabs.js">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/js/imagezoom.js">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/js/jquery-2.2.3.min.js">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/js/jquery-3.5.0.min.js">
+      <publishTime>04/26/2020 19:31:28</publishTime>
+    </File>
+    <File Include="Content/js/jquery.flexslider.js">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/js/jquery.magnific-popup.js">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/js/minicart.js">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/js/move-top.js">
+      <publishTime>04/23/2020 21:54:39</publishTime>
+    </File>
+    <File Include="Content/js/scroll.js">
+      <publishTime>04/23/2020 21:54:40</publishTime>
+    </File>
+    <File Include="Content/js/SmoothScroll.min.js">
+      <publishTime>04/23/2020 21:54:40</publishTime>
+    </File>
+    <File Include="Content/PagedList.css">
+      <publishTime>04/29/2020 08:20:20</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>04/22/2020 14:25:21</publishTime>
+    </File>
+    <File Include="Content/webfonts/fa-brands-400.eot">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/webfonts/fa-brands-400.svg">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/webfonts/fa-brands-400.ttf">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/webfonts/fa-brands-400.woff">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/webfonts/fa-brands-400.woff2">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/webfonts/fa-regular-400.eot">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/webfonts/fa-regular-400.svg">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/webfonts/fa-regular-400.ttf">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/webfonts/fa-regular-400.woff">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/webfonts/fa-regular-400.woff2">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/webfonts/fa-solid-900.eot">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/webfonts/fa-solid-900.svg">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/webfonts/fa-solid-900.ttf">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/webfonts/fa-solid-900.woff">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="Content/webfonts/fa-solid-900.woff2">
+      <publishTime>04/23/2020 21:54:37</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>04/22/2020 14:25:21</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>04/22/2020 14:25:23</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>04/22/2020 14:25:23</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>04/22/2020 14:25:23</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>04/22/2020 14:25:23</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>04/22/2020 14:25:23</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/22/2020 14:25:21</publishTime>
+    </File>
+    <File Include="Models/QuanLyBanHangModel.edmx.diagram">
+      <publishTime>04/26/2020 07:22:41</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>04/22/2020 14:25:23</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>04/22/2020 14:25:23</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.js">
+      <publishTime>04/22/2020 14:25:24</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.js">
+      <publishTime>04/22/2020 14:25:24</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.map">
+      <publishTime>04/22/2020 14:25:24</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.js">
+      <publishTime>04/22/2020 14:25:24</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.min.js">
+      <publishTime>04/22/2020 14:25:24</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.min.map">
+      <publishTime>04/22/2020 14:25:24</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.js">
+      <publishTime>04/23/2020 13:38:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.min.js">
+      <publishTime>04/23/2020 13:38:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>04/22/2020 14:25:26</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>04/22/2020 14:25:26</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>04/22/2020 14:25:27</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>04/22/2020 14:25:27</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.8.3.js">
+      <publishTime>04/22/2020 14:25:26</publishTime>
+    </File>
+    <File Include="Views/DemoAjax/DemoAjax.cshtml">
+      <publishTime>04/26/2020 20:11:49</publishTime>
+    </File>
+    <File Include="Views/GioHang/GioHangPartialView.cshtml">
+      <publishTime>04/28/2020 16:25:30</publishTime>
+    </File>
+    <File Include="Views/GioHang/XemGioHang.cshtml">
+      <publishTime>04/28/2020 16:23:00</publishTime>
+    </File>
+    <File Include="Views/Home/HeaderPartialView.cshtml">
+      <publishTime>04/28/2020 14:49:37</publishTime>
+    </File>
+    <File Include="Views/Home/HeadPartialView.cshtml">
+      <publishTime>04/27/2020 08:42:55</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>04/28/2020 10:18:49</publishTime>
+    </File>
+    <File Include="Views/Home/MenuPartialView.cshtml">
+      <publishTime>04/28/2020 11:21:33</publishTime>
+    </File>
+    <File Include="Views/Layout/HomeLayout.cshtml">
+      <publishTime>04/29/2020 10:58:53</publishTime>
+    </File>
+    <File Include="Views/Layout/ListProductLayout.cshtml">
+      <publishTime>04/29/2020 10:59:01</publishTime>
+    </File>
+    <File Include="Views/Layout/SinglePageLayout.cshtml">
+      <publishTime>04/29/2020 10:58:47</publishTime>
+    </File>
+    <File Include="Views/SanPham/Product.cshtml">
+      <publishTime>04/27/2020 09:22:52</publishTime>
+    </File>
+    <File Include="Views/SanPham/ProductDetail.cshtml">
+      <publishTime>04/27/2020 10:28:34</publishTime>
+    </File>
+    <File Include="Views/SanPham/ProductPartialView.cshtml">
+      <publishTime>04/29/2020 10:08:06</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>04/22/2020 14:25:21</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>04/22/2020 14:25:21</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>04/22/2020 14:25:21</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>04/22/2020 14:25:21</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/29/2020 15:02:17</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

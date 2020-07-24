@@ -1,0 +1,285 @@
+﻿@using WebSiteBanHang.Models
+@model ThanhVien
+
+@{
+    ThanhVien tv = Session["TaiKhoan"] as ThanhVien;
+}
+
+<div>
+
+    <!-- top-header -->
+    <div class="agile-main-top">
+        <div class="container-fluid">
+            <div class="row main-top-w3l py-2">
+                <div class="col-lg-4 header-most-top">
+                    <p class="text-white text-lg-left text-center">
+                        Offer Zone Top Deals & Discounts
+                        <i class="fas fa-shopping-cart ml-1"></i>
+                    </p>
+                </div>
+                <div class="col-lg-8 header-right mt-lg-0 mt-2">
+                    <!-- header lists -->
+                    <ul>
+                        <li class="text-center border-right text-white">
+                            <a class="play-icon popup-with-zoom-anim text-white" href="#small-dialog1">
+                                <i class="fas fa-map-marker mr-2"></i>Select Location
+                            </a>
+                        </li>
+                        <li class="text-center border-right text-white">
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="text-white">
+                                <i class="fas fa-truck mr-2"></i>Track Order
+                            </a>
+                        </li>
+                        <li class="text-center border-right text-white">
+                            <i class="fas fa-phone mr-2"></i> 001 234 5678
+                        </li>
+                        @if (tv != null)
+                        {
+                            <li class="text-center text-white border-right dropdown">
+                                <i class="fas fa-user mr-2 "> </i> Hello @tv.TaiKhoan
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item">
+                                        <i class="fas fa-info mr-2"></i>Thông tin tài khoản
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="fas fa-edit mr-2"></i>Thay đổi thông tin
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="text-center text-white">
+                                <a href="@Url.Action("LogOut","Home", new { @urlCurrent = Request.Url.ToString()})" class="text-white">
+                                    <i class="fas fa-sign-out-alt mr-2"></i> LogOut
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="text-center border-right text-white">
+                                <a href="#" data-toggle="modal" data-target="#exampleModal" class="text-white">
+                                    <i class="fas fa-sign-in-alt mr-2"></i> Login
+                                </a>
+                            </li>
+
+                            <li class="text-center text-white">
+                                <a href="#" data-toggle="modal" data-target="#exampleModal2" class="text-white">
+                                    <i class="fas fa-registered mr-2"></i>Register
+                                </a>
+                            </li>
+                        }
+
+                    </ul>
+                    <!-- //header lists -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button trigger modal(select-location) -->
+    <div id="small-dialog1" class="mfp-hide">
+        <div class="select-city">
+            <h3>
+                <i class="fas fa-map-marker"></i> Please Select Your Location
+            </h3>
+            <select class="list_of_cities">
+                <optgroup label="Popular Cities">
+                    <option selected style="display:none;color:#eee;">Select City</option>
+                    <option>Birmingham</option>
+                </optgroup>
+                <optgroup label="Alabama">
+                    <option>Birmingham</option>
+                </optgroup>
+                <optgroup label="Alaska">
+                    <option>Anchorage</option>
+                </optgroup>
+                <optgroup label="Arizona">
+                    <option>Phoenix</option>
+                </optgroup>
+                <optgroup label="Arkansas">
+                    <option>Little Rock</option>
+                    <option>Fort Smith</option>
+                </optgroup>
+                <optgroup label="California">
+                    <option>Los Angeles</option>
+                </optgroup>
+                <optgroup label="Colorado">
+                    <option>Denver</option>
+                </optgroup>
+
+            </select>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- //shop locator (popup) -->
+    <!-- modals -->
+    <!-- log in -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center">Log In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @using (Ajax.BeginForm("Login", "Home", new AjaxOptions
+                    {
+                        HttpMethod = "POST",
+                        InsertionMode = InsertionMode.Replace,
+                        UpdateTargetId = "loginError"
+                    }))
+                    {
+                        <div class="form-group">
+                            @Html.Label("TenTK", "Username", new { @class = "col-form-label" })
+                            @Html.TextBox("TenTK", null, new { @class = "form-control", @required = "required", @placeholder = "Enter Username" })
+                        </div>
+                        <div class="form-group">
+                            @Html.Label("MK", "Password", new { @class = "col-form-label" })
+                            @Html.TextBox("MK", null, new { @class = "form-control", @required = "required", @placeholder = "Enter Password" })
+                        </div>
+                        <p id="loginError" style="color:red"></p>
+                        <div class="right-w3l">
+                            <input type="submit" class="form-control" value="Log in">
+                        </div>
+                        <div class="sub-w3l">
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                                <label class="custom-control-label" for="customControlAutosizing">Remember me?</label>
+                            </div>
+                        </div>
+                        <p class="text-center dont-do mt-3">
+                            Don't have an account?
+                            <a href="#" data-toggle="modal" data-target="#exampleModal2">
+                                Register Now
+                            </a>
+                        </p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- register -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @using (Html.BeginForm("Register", "Home", FormMethod.Post))
+                    {
+                        <div class="form-group">
+                            @Html.TextBox("HoTen", null, new { @class = "form-control", @required = "required", @placeholder = "Your Name" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBox("TaiKhoan", null, new { @class = "form-control", @required = "required", @placeholder = "UserName" })
+                        </div>
+                        <div class="form-group">
+                            @Html.Password("MatKhau", null, new { @class = "form-control", @required = "required", @placeholder = "Password" })
+                        </div>
+                        <div class="form-group">
+                            @Html.Password("confirmMK", null, new { @class = "form-control", @required = "required", @placeholder = "Confirm Password" })
+                            <p id="cofirmPassError" style="color:red"></p>
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBox("Email", null, new { @class = "form-control", @required = "required", @placeholder = "Email" })
+                            <p id="emailError" style="color:red"></p>
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBox("DiaChi", null, new { @class = "form-control", @placeholder = "Address" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBox("SoDienThoai", null, new { @class = "form-control", @placeholder = "Phone Number" })
+                        </div>
+                        <div class="sub-w3l">
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="customControlAutosizing2">
+                                <label class="custom-control-label" for="customControlAutosizing2">I Accept to the Terms & Conditions</label>
+                            </div>
+                        </div>
+                        <div class="right-w3l">
+                            <input type="submit" id="btnRegister" class="form-control" value="Register">
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- //modal -->
+    <!-- //top-header -->
+    <!-- header-bottom-->
+    <div class="header-bot">
+        <div class="container">
+            <div class="row header-bot_inner_wthreeinfo_header_mid">
+                <!-- logo -->
+                <div class="col-md-3 logo_agile">
+                    <h1 class="text-center">
+                        <a href="@Url.Action("Index", "Home")" class="font-weight-bold font-italic">
+                            <img src="~/Content/images/logo2.png" alt=" " class="img-fluid">TuanBTD Store
+                        </a>
+                    </h1>
+                </div>
+                <!-- //logo -->
+                <!-- header-bot -->
+                <div class="col-md-9 header mt-4 mb-md-0 mb-4">
+                    <div class="row">
+
+                        <!-- search -->
+                        <div class="col-9 agileits_search">
+
+                            @using (Html.BeginForm("FindProductByName", "SanPham", FormMethod.Post, new { @class = "form-inline" }))
+                            {
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="productName" required>
+                                <button class="btn my-2 my-sm-0" type="submit">Search</button>
+                            }
+
+                        </div>
+                        <!-- //search -->
+                        @*@{Html.RenderAction("GioHangPartialView", "GioHang"); }*@
+                        @Html.Action("GioHangPartialView", "GioHang")
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    $("#btnRegister").click(function () {
+
+        var password = $("#MatKhau").val();
+        var confirmMK = $("#confirmMK").val();
+        var hoten = $("#HoTen").val();
+        var taiKhoan = $("#TaiKhoan").val();
+        var email = $("#Email").val();
+        var regexEmail = /^\w+([\.-]?\w+)*@@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var count = 0;
+
+        if (password != confirmMK) {
+            $("#cofirmPassError").text("Mật khẩu không khớp");
+            count++;
+        } else {
+            $("#cofirmPassError").text("");
+        }
+        if (regexEmail.test(email) == false) {
+            $("#emailError").text("Email không đúng định dạng");
+            count++;
+        } else {
+            $("#emailError").text("");
+        }
+        if (count > 0)
+            return false;
+        else
+            return true;
+    });
+</script>

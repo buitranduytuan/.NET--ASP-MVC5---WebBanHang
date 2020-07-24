@@ -1,0 +1,96 @@
+﻿@using WebSiteBanHang.Models
+@model IEnumerable<SanPham>
+@{
+    ViewBag.Title = "ProductManagement";
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayout2.cshtml";
+}
+
+@{Html.RenderAction("MenuProductPartialView");}
+
+
+@if (Model != null)
+{
+    <div class="bs-example4" data-example-id="simple-responsive-table">
+        <div class="table-responsive">
+            <table class="table" id="productTable">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th style="width:25%;">Tên Sản Phẩm</th>
+                        <th>Hình Ảnh</th>
+                        <th>Đơn Giá</th>
+                        <th>Số Lượng Đã Bán</th>
+                        <th>Số Lượng Tồn Kho</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{ int i = 1;}
+                    @foreach (var item in Model)
+                    {
+                        string donGia = string.Format("{0:#,0}", item.DonGia);
+                        <tr>
+                            <th scope="row">@i</th>
+                            <td>@item.TenSP</td>
+                            <td>
+                                <img src="~/Content/Images/@item.LoaiSanPham.TenLoai/@item.NhaSanXuat.TenNSX/@item.HinhAnh"
+                                     alt="" style="height:80px; width:80px" />
+                            </td>
+                            <td>@donGia</td>
+                            <td>@item.SoLanMua</td>
+                            <td>@item.SoLuongTon</td>
+                            <td>
+                                <a href="@Url.Action("ProductDetail","ProductManagement",new { @id = item.MaSP})">
+                                    <i class="fa fa-info customIcon" style="color:deepskyblue" title="See product details"></i>
+                                </a>
+
+                                <a href="@Url.Action("EditProduct","ProductManagement",new { @id = item.MaSP})">
+                                    <i class="fa fa-edit customIcon" style="color:darkcyan" title="Modify info Product"></i>
+                                </a>
+
+                                <a href="@Url.Action("DeleteProduct","ProductManagement",new { @id = item.MaSP})">
+                                    <i class="fa fa-trash-o customIcon" style="color:red" title="Delete this Product"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+
+
+<style>
+
+    table, th, td {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        vertical-align: middle;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    tr:hover {
+        /*background-color: #b8fbfb;*/
+        color: red;
+        cursor: pointer;
+    }
+
+    .customIcon {
+        padding: 5px;
+    }
+</style>
+
+<!-- jQuery library -->
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#productTable').DataTable();
+    });
+</script>

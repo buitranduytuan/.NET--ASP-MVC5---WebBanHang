@@ -1,0 +1,68 @@
+﻿@model WebSiteBanHang.Models.SanPham
+
+@{
+    ViewBag.Title = "ProductDetail";
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayout2.cshtml";
+}
+
+<h2 style="color:red">@Model.TenSP</h2>
+
+@Html.ActionLink("Edit", "EditProduct", new { @id = Model.MaSP }, new { @type = "button", @class = "btn btn-success" })
+@Html.ActionLink("Delete", "DeleteProduct", new { @id = Model.MaSP }, new { @type = "button", @class = "btn btn-danger" })
+@Html.ActionLink("Back to List", "ListProduct", null, new { @type = "button", @class = "btn btn-primary" })
+
+<hr />
+<div class="bs-example4" data-example-id="simple-responsive-table">
+    <div class="table-responsive">
+        <table class="table" id="productTable">
+            <thead>
+                <tr>
+                    <th>Hình Ảnh</th>
+                    <th>Đơn Giá</th>
+                    <th>Số Lượng Đã Bán</th>
+                    <th>Số Lượng Tồn Kho</th>
+                    <th>Nhà Sản Xuất</th>
+                    <th>Nhà Cung Cấp</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="~/Content/Images/@Model.LoaiSanPham.TenLoai/@Model.NhaSanXuat.TenNSX/@Model.HinhAnh"
+                             alt="" style="height:80px; width:80px" />
+                    </td>
+                    <td>@Model.DonGia</td>
+                    <td>@Model.SoLanMua</td>
+                    <td>@Model.SoLuongTon</td>
+                    <td>
+                        @if (@Model.NhaSanXuat != null)
+                        {
+                            @Model.NhaSanXuat.TenNSX
+                        }
+                    </td>
+                    <td>
+                        @if (@Model.NhaCungCap != null)
+                        {
+                            @Model.NhaCungCap.TenNCC
+                        }
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div id="MoTaSP">
+                @if (Model.MoTa != null)
+                {
+                    <h3 style="color:red">Mô Tả</h3>
+                    @Html.Raw(Model.MoTa)
+                }
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+</div>

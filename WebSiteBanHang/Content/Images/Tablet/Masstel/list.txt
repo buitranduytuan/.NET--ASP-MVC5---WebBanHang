@@ -1,0 +1,10 @@
+ Volume in drive D is IT
+ Volume Serial Number is DE86-9A5F
+
+ Directory of D:\C#\WebSiteBanHang - New\WebSiteBanHang\Content\Images\Tablet\Masstel
+
+[.]                                    masstel-tab10-pro-gold-2-600x600.jpg
+[..]                                   masstel-tab8-pro-gold-1-600x600.jpg
+list.txt                               
+               3 File(s)         86,774 bytes
+               2 Dir(s)  48,986,046,464 bytes free

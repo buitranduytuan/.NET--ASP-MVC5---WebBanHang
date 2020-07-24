@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "DemoAjax";
+    Layout = "~/Views/Layout/HomeLayout.cshtml";
+}
+
+<h2>DemoAjax</h2>
+
+@*Load Ajax theo cách thứ 1: ActionLink*@
+@Ajax.ActionLink("Load Ajax MVC", "LoadAjaxActionLink", new AjaxOptions
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "KetQua",
+    InsertionMode = InsertionMode.Replace,
+    LoadingElementId = "divLoading"
+});
+
+
+@*Load Ajax theo cách thứ 2: BeginForm*@
+@using (Ajax.BeginForm("LoadAjaxBeginFrom", new AjaxOptions
+{
+    HttpMethod = "POST",
+    UpdateTargetId = "KetQua",
+    InsertionMode = InsertionMode.Replace,
+    LoadingElementId = "divLoading"
+}))
+{
+    <input type="text" name="txt1" id="txt1" />
+    <input type="submit" value="Submit" />
+}
+
+<div id="divLoading" style="display:none">
+    <img src="~/Content/img/loading1.gif" />
+</div>
+
+<div style="width: 200px; height: 200px" id="KetQua">
+    This is a Result:
+</div>
+
+
+<button id="buttonId">ClickMe - Cách 3</button> <br />
+Tham số A: <input type="text" id="thamsoA" />
+Tham số B: <input type="text"  id="thamsoB" />
+<input type="button" value="ClickMeCach3" id="btnId" />
+
+@*Load Ajax theo cách thứ 3*@
+<script>
+    $(document).ready(function () {
+        $("#btnId").click(function () {
+            var tsa = $("thamsoA").val();
+            var tsb = $("thamsoB").val();
+            $('#divLoading').show();
+            $.ajax({
+                type: 'GET',
+                data: { a: tsa, b: tsb },
+                url: 'LoadAjaxCach3',
+                success: function (ketqua) {
+                    $('#divLoading').hide();
+                    $('#KetQua').html(ketqua);
+                }
+            })
+        })
+    })
+</script>
+
+<script src="~/Content/js/jquery-3.5.0.min.js"></script>
+
+@*$(document).ready(function(){
+        $("#clickLogin").click(function(){
+            var userName = $("#tenDangNhap").val();
+            var password = $("#matKhau").val();
+
+            $.ajax({
+                url: "/ShopTuanBTD/api/login",
+                type: "GET",
+                data: {
+                    tenDangNhap: userName,
+                    matKhau: password
+                },
+                success: function(value){
+                    if(value == "true"){
+                        $("#result").text("Login success !")
+                    } else {
+                        $("#result").text("Login fail !")
+                    }
+                }
+            })
+        });
+
+        $("#clickRegister").click(function(){
+            $("#register").show();
+            $("#login").hide();
+        });
+
+        $("#clickSignIn").click(function(){
+            $("#register").hide();
+            $("#login").show();
+        });
+
+    })*@

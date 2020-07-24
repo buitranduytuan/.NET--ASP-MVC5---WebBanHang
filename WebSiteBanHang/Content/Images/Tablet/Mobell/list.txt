@@ -1,0 +1,14 @@
+ Volume in drive D is IT
+ Volume Serial Number is DE86-9A5F
+
+ Directory of D:\C#\WebSiteBanHang - New\WebSiteBanHang\Content\Images\Tablet\Mobell
+
+[.]
+[..]
+list.txt
+mobell-tab-10-33397-1-thumb1-600x600.jpg
+mobell-tab-7s-thumb-600x600.jpg
+mobell-tab-8a-33397-600x600-600x600.jpg
+
+               4 File(s)        140,754 bytes
+               2 Dir(s)  48,986,046,464 bytes free

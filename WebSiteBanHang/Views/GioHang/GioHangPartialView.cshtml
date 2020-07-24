@@ -1,0 +1,117 @@
+﻿@using WebSiteBanHang.Models
+@model List<ItemGioHang>
+
+<!-- cart details -->
+
+    <div class="col-3 top_nav_right text-center mt-sm-0 mt-2" id="GioHangInfo">
+
+        <div>
+            <button class="btn w3view-cart" type="button" name="submit" id="btnGioHang">
+                <i class="fas fa-cart-arrow-down"></i>
+            </button>
+            <p> @ViewBag.TongSoLuong SP - @ViewBag.TongTien.ToString("#,##") đ</p>
+        </div>
+
+        <div class="danhsach" id="danhsachid">
+
+            @if (Model.Count == 0)
+            {
+                <ul class="list-group">
+                    <li class="list-group-item" style="color:#3bc55a ; width: 250px;"> Giỏ hàng trống </li>
+                </ul>
+            }
+            else
+            {
+                <input type="button" class="btn btn-block"
+                       onclick="window.location.href ='@Url.Action("XemGioHang", "GioHang")'" value="Đi đến giỏ hàng"
+                       style="background-color:#3bc55a; color:white" />
+
+                <div class="bs-example4" data-example-id="simple-responsive-table" style="background-color: white">
+                    <div class="table-responsive">
+                        <table class="table" id="productTable" style="border: 1px solid #3bc55a;margin-bottom:0px">
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    string donGia = string.Format("{0:#,0}", item.DonGia);
+                                    <tr>
+                                        <td>
+                                            <a href="@Url.Action("ProductDetail","SanPham", new {@id = item.MaSP })" style="color: black;">
+                                                @item.TenSP
+                                            </a>
+                                        </td>
+                                        <td>@donGia</td>
+                                        <td>@item.SoLuong</td>
+
+                                        <td>
+                                            <a href="@Url.Action("XoaSanPhamTrongGioHang", "GioHang", new { @maSP = item.MaSP })">
+                                                <i class="fa fa-trash-alt" style="color:red" title="Xóa khỏi giỏ hàng"></i>
+                                            </a>
+
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+
+<!-- //cart details -->
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var btnGH = document.getElementById('btnGioHang');
+        var ds = document.getElementById('danhsachid');
+
+        var trangThai = 1;
+        btnGH.onclick = function () {
+            if (trangThai == 1) {
+                trangThai = 2;
+                ds.style.display = 'block';
+
+            } else {
+                trangThai = 1;
+                ds.style.display = 'none';
+            }
+        }
+
+    }, false)
+</script>
+
+
+<style>
+
+    /*#btnGioHang {
+        float:left;
+        
+    }*/
+
+    .danhsach {
+        position: absolute;
+        top: 45px;
+        float: right;
+        right: 82px;
+        display: none;
+        z-index: 11;
+        width: 480px;
+        padding: 0;
+    }
+
+
+    li.list-group-item {
+        text-align: center;
+    }
+
+    tr:hover {
+        color: #28a745;
+    }
+
+    tr {
+        color: black;
+        text-align: left;
+    }
+</style>

@@ -1,0 +1,226 @@
+﻿@using WebSiteBanHang.Models;
+@model IEnumerable<ItemGioHang>
+
+@{
+    ViewBag.Title = "XemGioHang";
+    Layout = "~/Views/Layout/ListProductLayout.cshtml";
+    QuanLyBanHangDBEntities db = new QuanLyBanHangDBEntities();
+}
+
+@if (Model.Sum(n => n.SoLuong) == 0)
+{
+    <div style="height: 500px; text-align: center; padding: 20px">
+        <h4 style="color:red; padding: 20px">Bạn chưa có sản phẩm trong giỏ hàng</h4>
+        <input type="button" class="btn btn-success" onclick="window.location.href ='@Url.Action("Index", "Home")'" value="Tiếp tục mua hàng" />
+    </div>
+}
+else
+{
+    <div class="privacy py-sm-5 py-4" >
+        <div class="container py-xl-4 py-lg-2" >
+            <!-- tittle heading -->
+            <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
+                <span>C</span>hect
+                <span>O</span>ut
+            </h3>
+            <!-- //tittle heading -->
+            <div class="checkout-right">
+                <h5 class="mb-sm-4 mb-3" style="color:red">
+                    Giỏ hàng của bạn có @Model.Sum(n => n.SoLuong) sản phẩm - Tổng tiền phải thanh toán: @Model.Sum(n => n.ThanhTien).ToString("#,##")
+                </h5>
+
+                <div class="table-responsive">
+                    <table class="timetable_sub">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Tên Sản Phẩm</th>
+                                <th>Hình Ảnh</th>
+                                <th>Số Lượng</th>
+                                <th>Đơn Giá</th>
+                                <th>Thành Tiền</th>
+                                <th>Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @if (Model != null)
+                            {
+                                int i = 1;
+                                foreach (var item in Model)
+                                {
+                                    SanPham sp = db.SanPhams.Where(n => n.MaSP == item.MaSP).SingleOrDefault();
+
+                                    using (Html.BeginForm("SuaGioHang", "GioHang", new { @maSP = item.MaSP }))
+                                    {
+                                        <tr>
+                                            <td>@i</td>
+
+                                            <td>@item.TenSP</td>
+
+                                            <td>
+                                                <a href="@Url.Action("ProductDetail", "SanPham", new { id = item.MaSP })">
+                                                    <img src="~/Content/Images/@sp.LoaiSanPham.TenLoai/@sp.NhaSanXuat.TenNSX/@sp.HinhAnh" alt=" " class="img-responsive" style="height:80px; width:80px">
+                                                </a>
+                                            </td>
+
+                                            <td>
+                                                <input type="number" name="soLuong" id="soLuong" value="@item.SoLuong" min="1" style="width: 60px; text-align:center" />
+                                                <button type="submit">Update</button>
+                                            </td>
+
+                                            <td>@item.DonGia</td>
+
+                                            <td>@item.ThanhTien</td>
+
+                                            <td>
+                                                <a href="@Url.Action("XoaSanPhamTrongGioHang", "GioHang", new { @maSP = item.MaSP })"><i class="fas fa-trash-alt" style="color:red"></i></a>
+                                            </td>
+                                        </tr>
+                                    }
+
+                                    i++;
+                                }
+                            }
+
+                        </tbody>
+                    </table>
+
+
+                </div>
+
+
+            </div>
+
+            @*Nếu người dùng chưa có tài khoản, thì tạo form để lấy thông tin giao hàng*@
+            @if (Session["TaiKhoan"] == null)
+            {
+                <div style="padding:15px 15px 15px 0;" id="btnThongTin">
+                    <button class="btn btn-danger" id="loginDeMua" data-toggle="modal" data-target="#exampleModal">Login để mua hàng</button>
+                    <button class="btn btn-success" id="muaNhanh">Mua nhanh</button>
+                </div>
+
+                <div class="checkout-left" id="thongTinMuaHang" style="display: none;">
+                    <div class="address_form_agile mt-sm-5 mt-4">
+                        <h4 class="mb-sm-4 mb-3">Thông tin giao hàng</h4>
+                        @using (Html.BeginForm("DatHang", "GioHang", new { @class = "creditly-card-form agileinfo_form" }))
+                        {
+                            <div class="creditly-wrapper wthree, w3_agileits_wrapper">
+                                <div class="information-wrapper">
+                                    <div class="first-row">
+                                        <div class="controls form-group">
+                                            @Html.TextBox("TenKH", null, new { @class = "billing-address-name form-control", @required = "required", @placeholder = "Họ và Tên" })
+                                        </div>
+                                        <div class="w3_agileits_card_number_grids">
+                                            <div class="w3_agileits_card_number_grid_left form-group">
+                                                <div class="controls">
+                                                    @Html.TextBox("DiaChi", null, new { @class = "form-control", @required = "required", @placeholder = "Địa Chỉ" })
+                                                </div>
+                                            </div>
+                                            <div class="w3_agileits_card_number_grid_right form-group">
+                                                <div class="controls">
+                                                    @Html.TextBox("Email", null, new { @class = "form-control", @required = "required", @placeholder = "Email" })
+                                                </div>
+                                            </div>
+                                            <div class="w3_agileits_card_number_grid_right form-group">
+                                                <div class="controls">
+                                                    @Html.TextBox("SoDienThoai", null, new { @class = "form-control", @required = "required", @placeholder = "Số điện thoại" })
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="controls form-group">
+                                            <select class="option-w3ls">
+                                                <option>Hình thức thanh toán</option>
+                                                <option>Office</option>
+                                                <option>Home</option>
+                                                <option>Commercial</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+
+
+                </div>
+            }
+
+            <div style="padding: 20px 20px 0 0; display: none;" id="btnDatHangMuaTiep">
+                <input type="button" class="btn btn-danger" onclick="window.location.href ='@Url.Action("DatHang", "GioHang")'" value="Đặt mua" />
+                <input type="button" class="btn btn-success" onclick="window.location.href ='@Url.Action("Index", "Home")'" value="Tiếp tục mua hàng" />
+            </div>
+
+            @if (Session["TaiKhoan"] != null)
+            {
+                <div style="padding: 20px 20px 0 0;" id="btnDatHangMuaTiep">
+                    <input type="button" class="btn btn-danger" onclick="window.location.href ='@Url.Action("DatHang", "GioHang")'" value="Đặt mua" />
+                    <input type="button" class="btn btn-success" onclick="window.location.href ='@Url.Action("Index", "Home")'" value="Tiếp tục mua hàng" />
+                </div>
+            }
+
+        </div>
+    </div>
+
+}
+<!-- //checkout page -->
+<!-- middle section -->
+<div class="join-w3l1 py-sm-5 py-4">
+    <div class="container py-xl-4 py-lg-2">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="join-agile text-left p-4">
+                    <div class="row">
+                        <div class="col-sm-7 offer-name">
+                            <h6>Smooth, Rich & Loud Audio</h6>
+                            <h4 class="mt-2 mb-3">Branded Headphones</h4>
+                            <p>Sale up to 25% off all in store</p>
+                        </div>
+                        <div class="col-sm-5 offerimg-w3l">
+                            <img src="~/Content/images/off1.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-lg-0 mt-5">
+                <div class="join-agile text-left p-4">
+                    <div class="row ">
+                        <div class="col-sm-7 offer-name">
+                            <h6>A Bigger Phone</h6>
+                            <h4 class="mt-2 mb-3">Smart Phones 5</h4>
+                            <p>Free shipping order over $100</p>
+                        </div>
+                        <div class="col-sm-5 offerimg-w3l">
+                            <img src="~/Content/images/off2.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- middle section -->
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var muaNhanh = document.getElementById('muaNhanh');
+        var thongTinMuaHang = document.getElementById('thongTinMuaHang');
+        var btnThongTin = document.getElementById('btnThongTin');
+        var btnDatHangMuaTiep = document.getElementById('btnDatHangMuaTiep');
+        var banner = document.getElementsByClassName('page-head_agile_info_w3l');
+        banner[0].style.display = 'none';
+
+        muaNhanh.onclick = function () {
+            thongTinMuaHang.style.display = 'block';
+            btnThongTin.style.display = 'none';
+            btnDatHangMuaTiep.style.display = 'block';
+            
+        }
+
+    }, false)
+</script>

@@ -1,0 +1,10 @@
+﻿@using WebSiteBanHang.Models
+
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Layout/ListProductLayout.cshtml";
+    List<SanPham> listSP = ViewBag.ListProduct;
+}
+
+@Html.Partial("~/Views/SanPham/ProductPartialView.cshtml", listSP);
+

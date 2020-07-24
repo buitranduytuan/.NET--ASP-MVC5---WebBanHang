@@ -1,0 +1,17 @@
+ Volume in drive D is IT
+ Volume Serial Number is DE86-9A5F
+
+ Directory of D:\C#\WebSiteBanHang - New\WebSiteBanHang\Content\Images\Tablet\Huawei
+
+[.]
+[..]
+huawei-mediapad-m5-lite-gray-600x600.jpg
+huawei-mediapad-t3-10-1-33397-thumb-600x600.jpg
+huawei-mediapad-t3-7-2018-33397-thumbmau-vang-600x600.png
+huawei-mediapad-t3-80-gold-600x600.jpg
+huawei-mediapad-t5-16gb-600x600-2-600x600.jpg
+huawei-mediapad-t5-33397-thumb123-600x600.jpg
+list.txt
+
+               7 File(s)        407,922 bytes
+               2 Dir(s)  48,986,046,464 bytes free

@@ -1,0 +1,376 @@
+﻿@using WebSiteBanHang.Models
+@using PagedList.Mvc
+@model PagedList.IPagedList<SanPham>
+
+
+@{
+    ViewBag.Title = "DanhSachSanPham";
+    var actionName = ViewBag.CheckActionName;
+    var totalProduct = Model.Count();
+    var totalLine = (totalProduct % 3 == 0) ? totalProduct / 3 : totalProduct / 3 + 1;
+
+}
+
+@if (Model != null)
+{
+    if (Model.Count == 0)
+    {
+        <h5 style="color: red; text-align: center; padding-top: 10px">Không có sản phẩm được tìm thấy </h5>
+    }
+
+    if (Model.Count > 0)
+    {
+        <div class="ads-grid" style="padding-top: 10px">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-1">
+
+                    </div>
+                    <div class="col-10">
+
+                        <div class="row">
+                            <!-- product left -->
+                            <div class="agileinfo-ads-display col-lg-9">
+
+                                <div class="wrapper">
+
+                                    <div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
+                                        @for (int i = 0; i < totalLine; i++)
+                                        {
+                                            <div class="row" style="padding-bottom: 20px">
+                                                <!-- line i+1 -->
+                                                @for (int j = 1; j <= 3; j++)
+                                                {
+                                                    if (i * 3 + j <= totalProduct)
+                                                    {
+                                                        var product = @Model[i * 3 + j - 1];
+                                                        string donGia = string.Format("{0:#,0}", product.DonGia);
+                                                        <div class="col-md-4 product-men" style="padding-top: 15px">
+
+                                                            <div class="men-pro-item simpleCart_shelfItem">
+                                                                <div class="men-thumb-item text-center">
+                                                                    <img src="~/Content/Images/@product.LoaiSanPham.TenLoai/@product.NhaSanXuat.TenNSX/@product.HinhAnh"
+                                                                         alt="" style="height:180px; width:180px" />
+                                                                    <div class="men-cart-pro">
+                                                                        <div class="inner-men-cart-pro">
+                                                                            <a href="@Url.Action("ProductDetail", "SanPham", new { id = product.MaSP })" class="link-product-add-cart">Quick View</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-info-product text-center border-top mt-4">
+                                                                    <h4 class="pt-1">
+                                                                        <a href="@Url.Action("ProductDetail", "SanPham", new { id = product.MaSP })">@product.TenSP</a>
+                                                                    </h4>
+                                                                    <div class="info-product-price my-2">
+                                                                        <span class="item_price">@donGia</span>
+                                                                        <del>$280.00</del>
+                                                                    </div>
+
+                                                                    <input type="button" class="btn btn-success"
+                                                                           onclick="window.location.href ='@Url.Action("ThemGioHang", "GioHang", new { @maSP = product.MaSP, @strURL = Request.Url.ToString() })'" value="Add to cart" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    }
+
+                                                }
+                                            </div>
+                                            <hr style="border: 0.5px solid blue;" />
+                                        }
+                                    </div>
+
+                                </div>
+
+
+                                @*Phần phân trang cho các chức năng tìm kiếm khác nhau*@
+                                @if (actionName.Equals("FindByLoaiSP - NSX"))
+                                {
+                                    <div class="phanTrang">
+                                        @*Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount*@
+                                        @Html.PagedListPager(Model, page => Url.Action("FindByLoaiSP-NSX", new { page = page, @maLoaiSP = ViewBag.MaLoaiSP, @maNSX = ViewBag.MaNSX }),
+                                                new PagedListRenderOptions
+                                                {
+                                                    LinkToFirstPageFormat = "<< Fist",
+                                                    LinkToPreviousPageFormat = "< Previous",
+                                                    LinkToNextPageFormat = "Next >",
+                                                    DelimiterBetweenPageNumbers = "|",
+                                                    LinkToLastPageFormat = "Last >>",
+                                                    LiElementClasses = new string[] { "page-item" }
+                                                })
+                                    </div>
+                                }
+                                @if (actionName.Equals("FindProductByLoaiSP"))
+                                {
+                                    <div class="phanTrang">
+                                        @*Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount*@
+                                        @Html.PagedListPager(Model, page => Url.Action("FindProductByLoaiSP", new { page = page, @key = ViewBag.KeyName }),
+                                                new PagedListRenderOptions
+                                                {
+                                                    LinkToFirstPageFormat = "<< Fist",
+                                                    LinkToPreviousPageFormat = "< Previous",
+                                                    LinkToNextPageFormat = "Next >",
+                                                    DelimiterBetweenPageNumbers = "|",
+                                                    LinkToLastPageFormat = "Last >>",
+                                                    LiElementClasses = new string[] { "page-item" }
+                                                })
+                                    </div>
+                                }
+
+                                @if (actionName.Equals("FindProductByName"))
+                                {
+                                    <div class="phanTrang">
+                                        @*Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount <br />*@
+                                        @Html.PagedListPager(Model, page => Url.Action("FindProductByName", new { page = page, @key = ViewBag.KeyName }),
+                                                new PagedListRenderOptions
+                                                {
+                                                    LinkToFirstPageFormat = "<< Fist",
+                                                    LinkToPreviousPageFormat = "< Previous",
+                                                    LinkToNextPageFormat = "Next >",
+                                                    DelimiterBetweenPageNumbers = "|",
+                                                    LinkToLastPageFormat = "Last >>",
+                                                    LiElementClasses = new string[] { "page-item" }
+                                                })
+                                    </div>
+                                }
+                            </div>
+                            <!-- //product left -->
+                            <!-- Search product right -->
+                            <div class="col-lg-3 mt-lg-0 mt-4 p-lg-0">
+                                <div class="side-bar p-sm-4 p-3">
+                                    <div class="search-hotel border-bottom py-2">
+                                        <h3 class="agileits-sear-head mb-3">Brand</h3>
+
+                                        <form action="#" method="post">
+                                            <input type="search" placeholder="Search Brand..." name="search" required="">
+                                            <input type="submit" value=" ">
+                                        </form>
+
+                                        <div class="left-side py-2">
+                                            <ul>
+                                                <li>
+                                                    <input type="checkbox" class="checked">
+                                                    <span class="span">Samsung</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" class="checked">
+                                                    <span class="span">Red Mi</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" class="checked">
+                                                    <span class="span">Apple</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" class="checked">
+                                                    <span class="span">Nexus</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" class="checked">
+                                                    <span class="span">Motorola</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" class="checked">
+                                                    <span class="span">Micromax</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" class="checked">
+                                                    <span class="span">Lenovo</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" class="checked">
+                                                    <span class="span">Oppo</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" class="checked">
+                                                    <span class="span">Sony</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" class="checked">
+                                                    <span class="span">LG</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" class="checked">
+                                                    <span class="span">One Plus</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- ram -->
+                                    <div class="left-side border-bottom py-2">
+                                        <h3 class="agileits-sear-head mb-3">Ram</h3>
+                                        <ul>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">Less than 512 MB</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">512 MB - 1 GB</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">1 GB</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">2 GB</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">3 GB</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">5 GB</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">6 GB</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">6 GB & Above</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- //ram -->
+                                    <!-- price -->
+                                    <div class="range border-bottom py-2">
+                                        <h3 class="agileits-sear-head mb-3">Price</h3>
+                                        <div class="w3l-range">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Under $1,000</a>
+                                                </li>
+                                                <li class="my-1">
+                                                    <a href="#">$1,000 - $5,000</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">$5,000 - $10,000</a>
+                                                </li>
+                                                <li class="my-1">
+                                                    <a href="#">$10,000 - $20,000</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">$20,000 $30,000</a>
+                                                </li>
+                                                <li class="mt-1">
+                                                    <a href="#">Over $30,000</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- //price -->
+                                    <!-- discounts -->
+                                    <div class="left-side border-bottom py-2">
+                                        <h3 class="agileits-sear-head mb-3">Discount</h3>
+                                        <ul>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">5% or More</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">10% or More</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">20% or More</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">30% or More</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">50% or More</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">60% or More</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- //discounts -->
+                                    <!-- offers -->
+                                    <div class="left-side border-bottom py-2">
+                                        <h3 class="agileits-sear-head mb-3">Offers</h3>
+                                        <ul>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">Exchange Offer</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">No Cost EMI</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">Special Price</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- //offers -->
+                                    <!-- delivery -->
+                                    <div class="left-side border-bottom py-2">
+                                        <h3 class="agileits-sear-head mb-3">Cash On Delivery</h3>
+                                        <ul>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">Eligible for Cash On Delivery</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- //delivery -->
+                                    <!-- arrivals -->
+                                    <div class="left-side border-bottom py-2">
+                                        <h3 class="agileits-sear-head mb-3">New Arrivals</h3>
+                                        <ul>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">Last 30 days</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">Last 90 days</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="left-side py-2">
+                                        <h3 class="agileits-sear-head mb-3">Availability</h3>
+                                        <ul>
+                                            <li>
+                                                <input type="checkbox" class="checked">
+                                                <span class="span">Exclude Out of Stock</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- //arrivals -->
+                                </div>
+                                <!-- //product right -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+
+<style>
+
+    .phanTrang {
+        position: absolute;
+        right: 5%;
+        padding: 30px;
+        /*background-color: blue;*/
+    }
+</style>
+
+
+
+
